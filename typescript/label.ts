@@ -1,8 +1,8 @@
-export function clearList(){
+function clearList(){
 	document.getElementById('blog-list').innerHTML = ''
 }
 
-export function createLabel(data): boolean{
+function createLabel(data): boolean{
 	const list = document.getElementById('blog-list')
 
 	const html = getLabelHTML(data)
@@ -35,4 +35,21 @@ function getLabelHTML(data): string{
           </div>
        </div>
 	`
+}
+
+function labelEvents(): void {
+	const labels = Array.prototype.slice.call(document.getElementsByClassName('single-post'))
+
+	for(let label of labels){
+		label.addEventListener('click', (event)=> {
+			const target = event.target
+
+			const title = target.children[1].children[0].lastChild.innerHTML
+
+			const labelEncontrada = labels.find(x => x.children[0].children[1].children[0].lastChild.innerHTML == title)
+
+			console.log(labelEncontrada)
+		})
+	}
+
 }

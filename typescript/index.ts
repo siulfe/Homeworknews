@@ -1,5 +1,3 @@
-import { createLabel } from './label.js'
-
 const item = {
 	preTitle: 'Prueba',
 	title: 'Esta funcionando',
@@ -8,3 +6,6 @@ const item = {
 }
 
 createLabel(item)
+
+
+labelEvents()
