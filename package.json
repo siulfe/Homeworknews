@@ -1,0 +1,6 @@
+{
+	"scripts":{
+		"test": "echo \"Hello world\"",
+		"compilar": "npx tsc"
+	}
+}

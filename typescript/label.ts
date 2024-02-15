@@ -9,11 +9,19 @@ function createLabel(item): void {
 	list.innerHTML += __getLabelHTML(item)
 }
 
+function addLabelEvents(callback: (event)=> void): void{
+  const blogs: any = document.getElementsByClassName('single-post')
+
+  for(let blog of blogs)
+    blog.addEventListener('click', callback)
+}
+
 function __getLabelHTML(item): string {
 	return `
 		<div class="col-lg-4 col-md-6">
           <div class="card h-100">
              <div class="single-post post-style-2 post-style-3">
+                <span class="d-none">${item.id}</span>
                 <div class="blog-info">
                    <h6 class="pre-title"><a href="#"><b>${item.preTitle}</b></a></h6>
                    <h4 class="title"><a href="#"><b>${item.title}</b></a>
@@ -32,14 +40,3 @@ function __getLabelHTML(item): string {
        </div>
 	`
 }
-
-const blog = {
-	title: 'Prueba',
-	preTitle: 'Blog',
-	description: 'lorem ipsum',
-	username: 'luis',
-	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg'
-}
-
-createLabel(blog)

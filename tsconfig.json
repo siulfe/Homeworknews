@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext"
-  }
+    "target": "es6",
+    "rootDir": "./typescript",
+    "outDir": "./static/js"                          
+    }
 }
