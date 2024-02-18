@@ -17,6 +17,7 @@ function getLabelHTML(data): string{
 		<div class="col-lg-4 col-md-6">
           <div class="card h-100">
              <div class="single-post post-style-2 post-style-3">
+                <span class="d-none">${data.id}</span>
                 <div class="blog-info">
                    <h6 class="pre-title"><a href="#"><b>${data.preTitle}</b></a></h6>
                    <h4 class="title">
@@ -37,19 +38,9 @@ function getLabelHTML(data): string{
 	`
 }
 
-function labelEvents(): void {
-	const labels = Array.prototype.slice.call(document.getElementsByClassName('single-post'))
+function labelEvents(callback: (event)=> void): void {
+	const labels = document.getElementsByClassName('single-post')
 
-	for(let label of labels){
-		label.addEventListener('click', (event)=> {
-			const target = event.target
-
-			const title = target.children[1].children[0].lastChild.innerHTML
-
-			const labelEncontrada = labels.find(x => x.children[0].children[1].children[0].lastChild.innerHTML == title)
-
-			console.log(labelEncontrada)
-		})
-	}
-
+	for(let label of labels)
+		label.addEventListener('click', callback)
 }

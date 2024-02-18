@@ -1,6 +1,6 @@
 {
 	"scripts":{
 		"test":"echo \"Hello World\"",
-		"compiler":"npx tsc typescript/index.ts typescript/label.ts --outDir static/js/"
+		"compiler":"npx tsc"
 	}
 }
