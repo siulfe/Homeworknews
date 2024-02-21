@@ -74,7 +74,9 @@ function labelClick(event): void{
 	const blog = blogs.find(x => x.id == id)
 
 	clearList()
+	showSection(1)
 	showBlog(blog)
+	addMSGEvent()
 }
 
 for(let blog of blogs)

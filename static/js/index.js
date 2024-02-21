@@ -70,7 +70,9 @@ function labelClick(event) {
     const id = element.firstElementChild.innerHTML;
     const blog = blogs.find(x => x.id == id);
     clearList();
+    showSection(1);
     showBlog(blog);
+    addMSGEvent();
 }
 for (let blog of blogs)
     createLabel(blog);

@@ -1,7 +1,9 @@
 #chat {
     background: #FFF;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
+    height: 30rem;
+    overflow-y: scroll;
 }
 
 .blog-chat {
@@ -16,14 +18,19 @@
 	font-size: 1.2rem;
 }
 
-.msg span {
+.username {
 	font-size: 1.3rem;
+	color: #232397;
 }
 
-.msg span:first-letter {
+.username:first-letter, .msg{
 	text-transform: capitalize;
 }
 
 .msg-own {
 	text-align: right;
+}
+
+.msg-own .username {
+	color: #227222;
 }
