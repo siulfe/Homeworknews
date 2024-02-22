@@ -1,0 +1,28 @@
+#chat-div{
+    border: 1px solid;
+    border-radius: 5px 5px 0 0;
+    background: white;
+    overflow: scroll;
+    height: 25rem;
+}
+
+.msg {
+	font-size: 1.2rem 
+}
+
+.msg-own {
+    text-align: right;
+}
+
+.username {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.msg-own .username {
+	color: #166d16;
+}
+
+.msg-foreign .username {
+	color: #1515a2;
+}

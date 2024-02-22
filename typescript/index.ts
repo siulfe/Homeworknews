@@ -1,3 +1,7 @@
+const user = {
+	username: 'Yo',
+}
+
 const blogs: any[] = [
 {
 	id:1,
@@ -6,7 +10,13 @@ const blogs: any[] = [
 	description: 'lorem ipsum',
 	username: 'luis',
 	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg'
+	img: '../static/img/icons8-team-355979.jpg',
+	msg: [
+		{
+			text: 'Lorem ipsum',
+			username: 'Yo'
+		}
+	]
 },
 {
 	id:2,
@@ -15,7 +25,13 @@ const blogs: any[] = [
 	description: 'lorem ipsum',
 	username: 'luis',
 	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg'
+	img: '../static/img/icons8-team-355979.jpg',
+	msg: [
+		{
+			text: 'Lorem ipsum',
+			username: 'Yo'
+		}
+	]
 },
 {
 	id:3,
@@ -24,7 +40,17 @@ const blogs: any[] = [
 	description: 'lorem ipsum',
 	username: 'luis',
 	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg'
+	img: '../static/img/icons8-team-355979.jpg',
+	msg: [
+		{
+			text: 'Lorem ipsum',
+			username: 'Yo'
+		},
+		{
+			text: 'Lorem ipsum',
+			username: 'Alguien'
+		}
+	]
 }
 ]
 
@@ -40,5 +66,9 @@ function blogClick(event): void{
 		element = element.parentElement
 
 	const id: number = element.firstElementChild.innerHTML
-	console.log(blogs.find(x => x.id == id))
+	const blog = blogs.find(x => x.id == id)
+
+	showSection(1)
+	showChatMessage(blog)
+	addInputChatEvents()
 }
