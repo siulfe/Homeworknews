@@ -35,5 +35,5 @@ function getLabelHTML(data) {
 function labelEvents(callback) {
     const labels = document.getElementsByClassName('single-post');
     for (let label of labels)
-        label.addEventListener('click', callback);
+        label.addEventListener('click', (event) => callback(event, '.single-post'));
 }

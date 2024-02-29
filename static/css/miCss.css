@@ -34,3 +34,132 @@
 .msg-own .username {
 	color: #227222;
 }
+
+.sidebar-blog-container .avatar {
+   margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    z-index: 10;
+    border-radius: 100px;
+    position: relative;
+    border: 7px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+.sidebar-blog-title {
+	font-weight: bold;
+	font-size: 1.2rem; 
+}
+
+.sidebar-blog-pre-title {
+	font-weight: bold;
+	color: gray
+}
+
+.sidebar-title-zone .row:first-child {
+    margin-top: 0.5rem;
+}
+
+.div-username {
+    padding-top: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+#input-username {
+    border-radius: 5px;
+    padding:0.2rem;
+}
+
+#button-username {
+    border-radius: 5px;
+}
+
+#span-username {
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.switcher-bar {
+    background: #333;
+    border-bottom: 1px solid #444;
+    max-height: 60px;
+    position: relative;
+    z-index: 22;
+}
+
+body.dark,
+.dark .switcher-bar {
+    background: #1B1B1B;
+}
+
+.dark .switcher-bar,
+.dark .logo,
+.dark .header-btn a {
+    border-color: #000;
+}
+.logo.textual img {
+    height: 30px;
+    width: auto;
+    margin-top: 15px;
+}
+
+
+.logo {
+    border-right: 1px solid #444;
+}
+.product-switcher {
+    position: relative;
+    background: #222;
+}
+
+.logo.textual a {
+    color: #9B9B9B;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo a {
+    display: block;
+    max-height: 60px;
+}
+
+.product-switcher a {
+    position: relative;
+}
+
+.product-switcher a {
+    color: #9B9B9B;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    max-height: 60px;
+    padding: 5px 40px 5px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.product-switcher .badge {
+    background: #E66346;
+    border-radius: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    position: relative;
+    top: -3px;
+    right: -20px;
+    display: none;
+}
+
+.logo.textual img {
+    height: 30px;
+    width: auto;
+}
