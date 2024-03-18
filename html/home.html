@@ -12,8 +12,32 @@
 	<link href="../static/css/styles.css" rel="stylesheet">
 	<link href="../static/css/responsive.css" rel="stylesheet">
 	<link href="../static/css/miCss.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" type="text/css" href="../static/css/fa.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/gfonts.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/template.css">
 </head>
 <body>
+	<header class="switcher-bar ssss clearfix">
+     <div class="logo textual pull-left">
+        <a href="#" title="Switcher">
+        <img src="../static/img/logo.png" alt="Colorlib logo">
+        </a>
+     </div>
+     <div class="product-switcher pull-left">
+        <a href="#" title="Select a Product">HomeWorkNews <span class="badge">Template</span></a>
+     </div>
+     <div id="div-user-not-logged" class="pull-right">
+             <input type="text" name="username" id="input-username" placeholder="Nombre de usuario">
+            <button id="button-username" class="btn-small btn-secondary">Iniciar sesión</button>
+     </div>
+     <div id="div-user-logged" class="d-none pull-right">
+            <span id="span-username"></span>
+            <button id="button-close-session" class="btn-small btn-secondary">Cerrar sesión</button>
+     </div>
+  </header>
+
 	<section class="blog-area section">
 		<div class="container">
 			<div class="row" id="blog-list">
@@ -48,12 +72,13 @@
 	</section>
 
 	<script src="../static/js/jquery-3.1.1.min.js"></script>
-	<script src="../static/js/tether.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><script src="../static/js/tether.min.js"></script>
 	<script src="../static/js/bootstrap.js"></script>
 	<script src="../static/js/scripts.js"></script>
 	<script src="../static/js/label.js"></script>
 	<script src="../static/js/section.js"></script>
 	<script src="../static/js/chat.js"></script>
 	<script src="../static/js/index.js"></script>
+	<script src="../static/js/auth.js"></script>
 </body>
 </html>
