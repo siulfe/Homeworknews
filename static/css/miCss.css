@@ -26,3 +26,14 @@
 .msg-foreign .username {
 	color: #1515a2;
 }
+
+#div-user-not-logged button{
+    margin-right: 1rem;
+    border-radius: 5px
+}
+
+#input-username {
+    margin-top: 1rem;
+    border-radius: 5px;
+
+}
