@@ -12,8 +12,8 @@ function addMSGTOChat(msg) {
 }
 function chatMessageHTML(msg) {
     return `
-		<div class="msg ${msg.username == user.username ? 'msg-own' : 'msg-foreign'}">
-			<p class="username"> ${msg.username}</p>
+		<div class="msg ${msg.username == user.userName ? 'msg-own' : 'msg-foreign'}">
+			<p class="username"> ${msg.userName}</p>
 			<p class="msg-text"> ${msg.text}</p>
 		</div>
 	`;

@@ -17,45 +17,10 @@ const blogs: any[] = [
 			username: 'Yo'
 		}
 	]
-},
-{
-	id:2,
-	title: 'Prueba',
-	preTitle: 'Blog',
-	description: 'lorem ipsum',
-	username: 'luis',
-	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg',
-	msg: [
-		{
-			text: 'Lorem ipsum',
-			username: 'Yo'
-		}
-	]
-},
-{
-	id:3,
-	title: 'Prueba',
-	preTitle: 'Blog',
-	description: 'lorem ipsum',
-	username: 'luis',
-	createdAt: '06-02-2024',
-	img: '../static/img/icons8-team-355979.jpg',
-	msg: [
-		{
-			text: 'Lorem ipsum',
-			username: 'Yo'
-		},
-		{
-			text: 'Lorem ipsum',
-			username: 'Alguien'
-		}
-	]
 }
 ]
 
-for(let blog of blogs)
-	createLabel(blog)
+loadLabels()
 
 addLabelEvents(blogClick)
 

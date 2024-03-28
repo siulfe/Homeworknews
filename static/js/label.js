@@ -1,18 +1,36 @@
+
+
+async function loadLabels(callback){
+  const data = await axios.get('http://localhost:8080/blog')
+
+  blogs = data.data
+
+  for(let blog of blogs)
+    createLabel(blog)
+
+  addLabelEvents(callback)
+}
+
 function clearLabelList() {
-    document.getElementById('blog-list').innerHTML = '';
+  document.getElementById('blog-list').innerHTML = ''
 }
+
 function createLabel(item) {
-    const list = document.getElementById('blog-list');
-    list.innerHTML += __getLabelHTML(item);
+  const list = document.getElementById('blog-list')
+
+  list.innerHTML += __getLabelHTML(item)
 }
-function addLabelEvents(callback) {
-    const blogs = document.getElementsByClassName('single-post');
-    for (let blog of blogs)
-        blog.addEventListener('click', callback);
+
+function addLabelEvents(callback){
+  const blogs = document.getElementsByClassName('single-post')
+
+  for(let blog of blogs)
+    blog.addEventListener('click', callback)
 }
+
 function __getLabelHTML(item) {
-    return `
-		<div class="col-lg-4 col-md-6">
+  return `
+    <div class="col-lg-4 col-md-6">
           <div class="card h-100">
              <div class="single-post post-style-2 post-style-3">
                 <span class="d-none">${item.id}</span>
@@ -32,5 +50,5 @@ function __getLabelHTML(item) {
              </div>
           </div>
        </div>
-	`;
+  `
 }
