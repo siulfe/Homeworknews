@@ -27,7 +27,7 @@
 	color: #1515a2;
 }
 
-#div-user-not-logged button{
+#div-user-not-logged button, #div-user-logged button{
     margin-right: 1rem;
     border-radius: 5px
 }
@@ -36,4 +36,9 @@
     margin-top: 1rem;
     border-radius: 5px;
 
+}
+
+#span-username {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
