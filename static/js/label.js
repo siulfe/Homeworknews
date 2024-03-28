@@ -1,14 +1,22 @@
-
+let labelsLoading = false
 
 async function loadLabels(callback){
+  if(labelsLoading) return
+
+  labelsLoading = true
+
   const data = await axios.get('http://localhost:8080/blog')
 
   blogs = data.data
+
+  clearLabelList()
 
   for(let blog of blogs)
     createLabel(blog)
 
   addLabelEvents(callback)
+
+  labelsLoading = false
 }
 
 function clearLabelList() {

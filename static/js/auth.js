@@ -38,6 +38,9 @@ function userLogged(username){
 	document.getElementById('div-user-logged').classList.remove('d-none')
 
 	document.getElementById('input-username').value = ''
+
+	if(blogUsed)
+		showChatMessage(blogUsed)
 }
 
 function userLogout(){
@@ -49,6 +52,9 @@ function userLogout(){
 
 	document.getElementById('div-user-not-logged').classList.remove('d-none')
 	document.getElementById('div-user-logged').classList.add('d-none')
+
+	if(blogUsed)
+		showChatMessage(blogUsed)
 }
 
 if(sessionStorage.getItem('username'))

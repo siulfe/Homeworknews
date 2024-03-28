@@ -3,6 +3,8 @@ const user = {
 }
 
 let blogs = []
+let blogUsed = undefined
+let sectionIndex = 0
 
 loadLabels(blogClick)
 
@@ -13,9 +15,24 @@ function blogClick(event){
         element = element.parentElement
 
     const id = element.firstElementChild.innerHTML
-    const blog = blogs.find(x => x.id == id)
+    blogUsed = blogs.find(x => x.id == id)
 
     showSection(1)
-    showChatMessage(blog)
+    showChatMessage(blogUsed)
     addInputChatEvents()
 }
+
+
+document.getElementById('img-logo').addEventListener('click',setMainSection)
+document.getElementById('HomeWorkNews').addEventListener('click',setMainSection)
+
+function setMainSection(){
+    if(sectionIndex == 0) return
+
+    blogUsed = undefined;
+
+    loadLabels(blogClick)
+
+    showSection(0)
+}
+
